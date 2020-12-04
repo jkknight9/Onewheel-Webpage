@@ -223,10 +223,6 @@ max-width: 600px;
 margin: 0 auto;
 }
 
-#ridingone{
-    position: relative;
-}
-
 .flex li {
 display: -webkit-box;
 display: -ms-flexbox;
