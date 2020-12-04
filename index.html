@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Onewheel</title>
+    <link href="main.css" rel="stylesheet">
+    <body>
+
+        <div id="content">
+            <header>
+                <h1 id="headerTitle">
+                    The Onewheel
+                </h1>
+                <img src = "pictures/onewheel.gif" alt="Onewheel" width= 100% height=600px>
+            </header>
+            <nav>
+                <div class= "xrcontainer">
+                    <img src= "pictures/xr.png" alt = "onewheelXR" width="10%" height="10%">
+                    <button class="btn" onclick= "hideShow('xrdetails', ['pintdetails', 'compareOnewheel', 'becomeafan']);"> </button>
+                </div>
+                <div class= "pintcontainer">
+                    <img src= "pictures/pint.png" alt = "onewheelpint" width="10%" height="10%">
+                    <button class="btn" onclick= "hideShow('pintdetails', ['xrdetails', 'compareonewheel', 'becomeafan']);"> </button>
+                </div>
+                    <p><button id="compare" onclick= "hideShow('compareonewheel', ['pintdetails', 'xrdetails', 'becomeafan']);">Compare</button></p>
+                <div>
+                    <p><button id="form" onclick= "hideShow('becomeafan', ['pintdetails', 'xrdetails', 'compareonewheel']);">Become a Fan</button></p>
+                </div>
+            </nav>
+            <main>            
+                <section id="xrdetails">
+                    <h1>
+                        Onewheel XR
+                    <h1>
+                    <p style="font-size: 22px;">
+                        The best all terrain, short-commuter, snowboard-like ride ever. 
+                    </p>
+                    <div>
+                        <p style="font-size: 22px;"> Specs:</p>
+                        <ul style="font-size: 20px;">
+                            <li>12-18 mile range
+                            <li>19mph Top Speed 
+                            <li>110 min Charge Time
+                            <li>6 shaping presets.
+                            <li> Customizable shaping
+                        </ul> 
+                        <iframe width="50%" height="300px" src="https://www.youtube.com/embed/0BkY-wy2ZvM?autoplay=1&mute=1&loop=1">
+                        </iframe>
+                    </section>
+                <section id="pintdetails">
+                    <h1>
+                        Onewheel Pint
+                    <h1>
+                    <p style="font-size: 22px;">
+                        This little ripper hits the sweet spot between price, performance, and practicality.
+                    </p>
+                    <div>
+                        <p  style="font-size: 22px;">Specs:</p>
+                        <ul style="font-size: 20px;">
+                            <li>6-8 mile range
+                            <li>16 mph Top Speed 
+                            <li>110 min Charge Time
+                            <li>4 shaping presets.
+                        </ul>
+                        
+                        <iframe width="50%" height="300px" src="https://www.youtube.com/embed/YIW-TGtAA-c?autoplay=1&mute=1&loop=1"></iframe>
+                    </section>
+                <section id="compareonewheel">
+                    <h1>
+                        Which is better for you?
+                    </h1>
+                    <div class="flex-container">
+                        <div>The XR is for shredding.
+                            <p><u>Fun facts:</u></p>
+                            <p>Powerful, Torquey, Rugged, Bold, Uncompromising, Fierce, Gritty, No Holding Back.</p>
+                            <p><u>A good fit if you like...</u></p>
+                            <p>Big Adventures, Long Commutes, The Unknown, The Scent of Pine Trees, Offroad Trails, Bigger and Larger Humans.</p>
+                            <img src= "pictures/ridingXR.png" alt = "riidingpint" width="100%">
+
+                        </div>
+                        <div>The Pint is for mini adventures.
+                            <p><u>Fun facts:</u></p>
+                            <p>Zippy, Poppy, Playful, Sporty, Agile, Refined, Friendly, Responsive, Nimble.</p>
+                            <p><u>A good fit if you like...</u></p>
+                            <p>Driveway Shredding, Dog Walks, Coffee Runs, Escaping From Reality, Freshly Paved Streetways, Beach Fronts.</p>
+                            <img src= "pictures/ridingPint.png" alt = "riidingpint" width="100%">
+                        </div>
+                    </div>
+                </section>
+                <section id= "becomeafan">
+                    <h1>Fan Form</h1>
+                    <div class="successMsg" style="display:none">
+                    Thank you for becoming a fan!
+                    </div>
+                    <form id="myform" novalidate>
+                    <ul class="flex">
+                        <li class="section-display">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name here" message = "First name is required" required>
+                            <div class="errorMsg">First Name is Required</div>
+                        </li>
+                        <li>
+                            <label for="last-name">Last Name</label>
+                            <input type="text"  id="last-name" name="last-name" placeholder="Enter your last name here" message = "Last name is required" required>
+                            <div class="errorMsg">Last Name is Required.</div>
+                        </li>
+                        <li >
+                            <label for="address">Address</label>
+                            <input type="text"  id="address" name="address" placeholder="Enter your address here" message="Address is required" required minlength="5">
+                            <div class="errorMsg">Address is required.</div>
+                        </li>
+                        <li>
+                            <label for="city">City</label>
+                            <input type="text"  id="city" name="city" placeholder="Enter your city here" message="City is required" required>
+                            <div class="errorMsg">City is required.</div>
+                        </li>
+                        <li >
+                            <label for="state">State</label>
+                            <input type="text"  id="state"  name="state" placeholder="Enter your state here" message="State is required" required maxlength="2">
+                            <div class="errorMsg">Please enter a two character state code</div>
+                        </li>
+                        <li >
+                            <label for="zip">Zip</label>
+                            <input id="zip" name="zip" type="text" placeholder="Enter a zip code here" message="Zip is required" required maxlength="5" minlength="5">
+                            <div class="errorMsg">You must enter a valid Zip Code.</div>
+                        </li>
+                        <li >
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email here" message="Email is required" required>
+                            <div class="errorMsg">You must enter a valid email.</div>
+                        </li>
+                        <li>
+                            <label for="phone">Phone</label>
+                            <input type="phone" class="phone-us" id="phone" placeholder="Enter your phone here" message="Phone is required" required minlength="10" maxlength="10">
+                            <div class="errorMsg">You must enter a valid phone number.</div>
+                        </li>
+                    
+                    <h2>How did you find my page?</h2>
+                    <ul class = "flex"></ul>
+                        <li>
+                            <input type="checkbox" id='ridingone' name='find-page' value="ridingone">
+                            <label for="ridingone">Saw someone riding one</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id='friend' name='find-page' value="friend">
+                            <label for="friend">Friend</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id='socialMedia' name='find-page' value="socialMedia">
+                            <div class="errorMsg">You must check at least one.</div>
+                            <label for="socialMedia">Social Media</label>
+                        </li>
+                        
+                        <li>
+                            <label for="comment">Comments</label>
+                            <textarea rows="2" id="comment" placeholder="Enter your comments here"></textarea>
+                        </li>
+                        
+                        <li>
+                            <button id="formSubmit" type="submit">Submit!</button>
+                        </li>
+                    </ul>
+                    </form>
+                </section>
+            </main>
+            <footer id="footer">
+                Check us out on social media<br>
+                <a href= "https://www.facebook.com/OnewheelOfficial/"> <img id= "footerImg" src="pictures/facebook.png" style="width: 8%; height: 8%;"> </a>
+                <a href="https://www.instagram.com/onewheel/"> <img id= "footerImg" src="pictures/instagram.png" style="width: 8%; height: 8%;"></a>
+                <a href="https://www.youtube.com/channel/UCCZMFqngWIbTcX_zPWPIJkg"> <img id= "footerImg"  src="pictures/youtube.png" style="width: 8%; height: 8%;"></a>
+            </footer>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="JS/view.js"></script>
+    <script src="JS/validate.js"></script>
+    <script src="JS/jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function () {
+          initValidation("#myform");
+    
+        });
+      </script>
+    </body>
+</head>
+</html>
