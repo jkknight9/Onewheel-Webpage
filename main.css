@@ -141,11 +141,35 @@ nav {
     border-style: groove;
 
 }
+table{
+    display: none;
+    width:100%;
+    border-collapse: collapse;
+}
 
+td,th{
+    border: 1px solid black;
+    text-align: left;
+    padding: 5px;
+}
+th {
+    background-color: green;
+}
+
+tr{
+    background-color: lightgray;
+}
 p {
     color: black;
     font-size: 18px;
     
+}
+#fanTable{
+    display: none;
+}
+
+#spacing{
+    margin-bottom: 10px;
 }
 
 iframe {
@@ -262,8 +286,8 @@ margin-bottom: 20px;
 .flex > li > label {
 -webkit-box-flex: 1;
     -ms-flex: 1 0 90px;
-        flex: 1 0 90px;
-max-width: 200px;
+        flex: 1 0 90px; 
+    max-width: 200px;
 }
 #formSubmit{
     width: 100%;

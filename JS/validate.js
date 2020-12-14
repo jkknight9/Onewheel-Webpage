@@ -19,8 +19,8 @@ $form.submit(function(event){
     $form = $(this);
     formEl=this;
 
-    event.preventDefault();  //prevent default browser submit
-    event.stopPropagation(); //stop event bubbling
+    event.preventDefault(); 
+    event.stopPropagation(); 
 
     validateForm();
 
@@ -28,8 +28,13 @@ $form.submit(function(event){
     $(":input").addClass("was-validated")
     }
     else{
+        addFan(Math.floor((Math.random() * 100) + 1), $("#first-name").val(), $("#last-name").val(), $("#address").val(), $("#city").val(), $("#state").val(), $("#zip").val(), $("#email").val(), $("#phone").val(), $("input[type=checkbox][name=bar]:checked").val(), $("#comments").val());
         $("#myform").hide();
-        $(".successMsg").show();
+        loadList()
+        $("table").show();
+        $(".newFan").show();
+        $(".clearData").show();
+
     }
 });
 }
@@ -63,8 +68,6 @@ $.each($("input[name=find-page]"), function(){
         valid = true
     }
 });
-//TODO
-//Validate whether any of the checkboxes are checked. set 'valid' to true if checked
 
 setElementValidity(fieldName, valid, message);
 return valid;

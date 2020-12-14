@@ -88,6 +88,10 @@
                 </section>
                 <section id= "becomeafan">
                     <h1>Fan Form</h1>
+                    <div id="spacing">
+                        <button class= "newFan" style="display:none" onclick= "toggle()">New Fan</button>
+                        <button class= "clearData" style="display:none" onclick="perge()">Clear Data</button>
+                    </div>
                     <div class="successMsg" style="display:none">
                     Thank you for becoming a fan!
                     </div>
@@ -160,17 +164,29 @@
                     </ul>
                     </form>
                 </section>
+                <section>
+                    <table id="fanTable" style="display: none;">
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Actions</th>
+                    </table>
+                </section>
             </main>
             <footer id="footer">
                 Check us out on social media<br>
-                <a href= "https://www.facebook.com/OnewheelOfficial/"> <img id= "footerImg" src="pictures/facebook.png" style="width: 8%; height: 8%;"> </a>
-                <a href="https://www.instagram.com/onewheel/"> <img id= "footerImg" src="pictures/instagram.png" style="width: 8%; height: 8%;"></a>
-                <a href="https://www.youtube.com/channel/UCCZMFqngWIbTcX_zPWPIJkg"> <img id= "footerImg"  src="pictures/youtube.png" style="width: 8%; height: 8%;"></a>
+                <a href= "https://www.facebook.com/OnewheelOfficial/"> <img id= "footerImg" src="pictures/facebook.png" style="width: 10%; height: 70%;"> </a>
+                <a href="https://www.instagram.com/onewheel/"> <img id= "footerImg" src="pictures/instagram.png" style="width:10%; height: 70%;"></a>
+                <a href="https://www.youtube.com/channel/UCCZMFqngWIbTcX_zPWPIJkg"> <img id= "footerImg"  src="pictures/youtube.png" style="width: 10%; height: 70%;"></a>
             </footer>
         </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="JS/model.js"></script>
     <script src="JS/view.js"></script>
+    <script src="JS/controller.js"></script>
     <script src="JS/validate.js"></script>
     <script src="JS/jquery.mask.min.js"></script>
     <script>
